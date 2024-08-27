@@ -60,7 +60,7 @@ jobs:
           context: ./
           tags: |
             vinayak868/gitops01:${{ github.sha }}
-            ghcr.io/vinatu/react-app:${{ github.sha }}
+            ghcr.io/vinatu/reactapp:${{ github.sha }}
           push: ${{ github.ref == 'refs/heads/master' }}
 
   update-manifest-stage:
@@ -76,7 +76,7 @@ jobs:
         run: |
           git config --global user.email "l00179000@atu.ie"
           git config --global user.name "vinatu"
-          sed -i "s#vinatu.*#vinatu/react-app:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#vinatu.*#vinatu/reactapp:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -am "Update image tag to ${{ github.sha }}"
       - run: git push origin master

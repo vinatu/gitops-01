@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className='App-logo' alt='logo' />
         <div style={{ fontSize: 30 }}>
           Version{' '}
-          <span style={{ color: 'red' }}>You rock!!!!....!!!</span>
+          <span style={{ color: 'red' }}>what's the craic?</span>
         </div>
       </header>
     </div>

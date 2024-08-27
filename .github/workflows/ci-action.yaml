@@ -61,9 +61,29 @@ jobs:
             ghcr.io/vinatu/reactapp:${{ github.sha }}
           push: ${{ github.ref == 'refs/heads/master' }}
 
-  update-manifest-stage:
+  create-sbom:
     runs-on: ubuntu-latest
     needs: ['build-and-push-docker-image']
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Syft
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+      - name: Generate SBOM
+        run: syft vinayak868/gitops01:${{ github.sha }} -o json > sbom.json
+      - name: Commit SBOM to repository
+        run: |
+          git config --global user.email "l00179000@atu.ie"
+          git config --global user.name "vinatu"
+          git add sbom.json
+          git commit -m "Add SBOM for image vinayak868/gitops01:${{ github.sha }}"
+          git push origin master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+  update-manifest-stage:
+    runs-on: ubuntu-latest
+    needs: ['create-sbom']
     steps:
       - uses: actions/checkout@v3
         with:

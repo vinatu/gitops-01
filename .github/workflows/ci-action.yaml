@@ -3,8 +3,6 @@ name: Build Step
 on:
   push:
     branches: ['master']
-#   pull_request:
-#     branches: [ "master" ]
 
 jobs:
   build:
@@ -29,7 +27,7 @@ jobs:
     steps:
       - name: Running Tests
         uses: actions/checkout@v3
-      - run: echo "Running Tests Placeholder"
+      - run: echo "what a wonderful world"
 
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
@@ -76,8 +74,7 @@ jobs:
         run: |
           git config --global user.email "l00179000@atu.ie"
           git config --global user.name "vinatu"
-          sed -i "s#vinatu.*#vinatu/reactapp:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#vinayak868/gitops01:.*#vinayak868/gitops01:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -am "Update image tag to ${{ github.sha }}"
       - run: git push origin master
-

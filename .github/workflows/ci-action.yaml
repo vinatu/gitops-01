@@ -1,3 +1,11 @@
+name: Build Step
+
+on:
+  push:
+    branches: ['master']
+#   pull_request:
+#     branches: [ "master" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +29,7 @@ jobs:
     steps:
       - name: Running Tests
         uses: actions/checkout@v3
-      - run: echo "cwbcqwicub"
+      - run: echo "Running Tests Placeholder"
 
   build-and-push-docker-image:
     name: Build Docker image and push to repositories

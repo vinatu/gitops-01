@@ -59,8 +59,8 @@ jobs:
         with:
           context: ./
           tags: |
-            vinatu/gitops01:${{ github.sha }}
-            ghcr.io/vinatu/gitops01:${{ github.sha }}
+            vinayak868/gitops01:${{ github.sha }}
+            ghcr.io/vinayak868/gitops01:${{ github.sha }}
           push: ${{ github.ref == 'refs/heads/master' }}
 
   update-manifest-stage:

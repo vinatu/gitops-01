@@ -78,8 +78,8 @@ jobs:
           git config --global user.name 'vinatu'
           git config --global user.email 'l00179000@atu.ie'
           git remote set-url origin https://vinatu:${{ secrets.GH_TOKEN }}@github.com/vinatu/reactapp.git
-          git add SBOM_for_ReactApp.json
-          git commit -m 'Add SBOM for image vinayak868/gitops01:${{ github.sha }}'
+          git add SBOM_for_ReactApp.txt
+          git commit -m 'SBOM Generated for image vinayak868/gitops01:${{ github.sha }}'
           git pull --rebase
           git push
 

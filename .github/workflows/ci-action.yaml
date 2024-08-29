@@ -93,7 +93,7 @@ jobs:
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
       - name: Verify Compliance
         run: grype sbom:sbom.json -o json > compliance-report.json
-      - name: Commit Compliance Report to repo
+      - name: SBOM GENERATION TEST
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |

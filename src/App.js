@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className='App-logo' alt='logo' />
         <div style={{ fontSize: 30 }}>
           Version{' '}
-          <span style={{ color: 'red' }}>Integration Testing of CI/CD Pipeline</span>
+          <span style={{ color: 'red' }}>Artifact deployed "L00179000@ATU.IE"</span>
         </div>
       </header>
     </div>

@@ -5,7 +5,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
+        <img src={logo} className='App-logo' alt='logo' /> 
         <div style={{ fontSize: 30 }}>
           Version{' '}
           <span style={{ color: 'red' }}>Artifact deployed "L00179000@ATU.IE"</span>

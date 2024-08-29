@@ -70,7 +70,7 @@ jobs:
         run: |
           curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
       - name: Generate SBOM
-        run: syft vinayak868/gitops01:${{ github.sha }} -o json > sbom.json
+        run: syft vinayak868/gitops01:${{ github.sha }} -o json > SBOM_for_ReactApp.json
       - name: Commit SBOM to repo
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -78,7 +78,7 @@ jobs:
           git config --global user.name 'vinatu'
           git config --global user.email 'l00179000@atu.ie'
           git remote set-url origin https://vinatu:${{ secrets.GH_TOKEN }}@github.com/vinatu/reactapp.git
-          git add sbom.json
+          git add SBOM_for_ReactApp.json
           git commit -m 'Add SBOM for image vinayak868/gitops01:${{ github.sha }}'
           git pull --rebase
           git push

@@ -11858,8 +11858,8 @@
   "type": "image",
   "target": {
    "userInput": "vinayak868/gitops01",
-   "imageID": "589ba20c169631b6",
-   "manifestDigest": "457658495d7e21098ac011ee0c1c2e4a9570abac",
+   "imageID": "6b53ee7823f41548",
+   "manifestDigest": "c09c7b2836bc6f3ff536a1e5d66cfbd7f6f9474d",
    "mediaType": "",
    "tags": [],
    "imageSize": 0,
@@ -12019,12 +12019,12 @@
    "match-upstream-kernel-headers": false
   },
   "db": {
-   "built": "2024-08-30T01:31:50Z",
+   "built": "2024-09-03T01:31:34Z",
    "schemaVersion": 5,
    "location": "/home/runner/.cache/grype/db/5",
-   "checksum": "sha256:94ed71d5ce3fb6ad848fee34fe7fa802214d0b13bc2e06a15ea46b865e33ddb4",
+   "checksum": "sha256:eca9dfcf12aedab0b9544808a1cd58d370888c6faa619704b3192951edfc7d3e",
    "error": null
   },
-  "timestamp": "2024-08-30T15:11:41.241771002Z"
+  "timestamp": "2024-09-03T08:06:56.212516893Z"
  }
 }

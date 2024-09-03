@@ -11858,8 +11858,8 @@
   "type": "image",
   "target": {
    "userInput": "vinayak868/gitops01",
-   "imageID": "f38c583afbfa4e0a",
-   "manifestDigest": "2e1bfb84f04b6bb5e736c04f71622d1687c7f095",
+   "imageID": "fefb2d6cc6c93aa9",
+   "manifestDigest": "d1e51d205cfcd18244ba74e65503aacd6527bfba",
    "mediaType": "",
    "tags": [],
    "imageSize": 0,
@@ -12025,6 +12025,6 @@
    "checksum": "sha256:eca9dfcf12aedab0b9544808a1cd58d370888c6faa619704b3192951edfc7d3e",
    "error": null
   },
-  "timestamp": "2024-09-03T10:48:03.70719105Z"
+  "timestamp": "2024-09-03T11:07:06.807582161Z"
  }
 }
